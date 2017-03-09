@@ -1,0 +1,11 @@
+<h3> What's your name! </h3>
+
+<%= @name %> <br><br> 
+
+
+<% if @name.downcase.first == "a" %>
+<%= "Hey, your name starts with the first letter of the alphabet!" %>
+<% else %>
+<%= "Cool name, bro." %>
+<% end %>
+
