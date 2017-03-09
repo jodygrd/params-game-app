@@ -12,7 +12,16 @@ class GamesController < ApplicationController
 	end
 
 	def guess_a_number
-		@guess = params[:guess].to_f
+		@guess = params[:guess].to_i
+   
+    if @guess == 36
+    	@status = "correct"
+    elsif @guess < 36
+    	@status = "too low"
+    else 
+    	@status = "too high"
+    end
+	
 	end
 
 end
