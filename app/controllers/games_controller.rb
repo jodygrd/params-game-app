@@ -24,6 +24,24 @@ class GamesController < ApplicationController
 	
 	end
 
+	def form
+		
+	end
+
+	def form_result
+     @guess = params[:guess].to_i
+   
+    if @guess == 36
+    	@status = "correct"
+    elsif @guess < 36
+    	@status = "too low"
+    else 
+    	@status = "too high"
+    end
+	
+
+	end
+
 end
 
 
